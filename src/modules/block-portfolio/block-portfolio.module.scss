@@ -1,9 +1,12 @@
 .block-portfolio {
   margin-top: 20px;
+  margin-bottom: 23px;
+
   &__top-block {
     display: flex;
     gap: 20px;
   }
+
   &__image-container {
     width: 350px;
     height: 450px;
@@ -18,6 +21,7 @@
       border-radius: 8px;
     }
   }
+
   &__title-chips {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -28,6 +32,11 @@
   &__bottom-chips {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  &__bottom-block {
+    display: flex;
     gap: 20px;
   }
 }

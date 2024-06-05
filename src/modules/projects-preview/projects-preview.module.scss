@@ -1,0 +1,29 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.projects-preview {
+  margin-top: 20px;
+  @include mixins.background-container;
+
+  width: 840px;
+  height: 304px;
+
+  padding: 20px 20px 30px 20px;
+
+  &__top-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__title {
+    @include mixins.Body-regular-20;
+    @include mixins.transition-color;
+    color: var(--color-main-text);
+  }
+  &__see-all{
+    cursor: pointer;
+    @include mixins.Body-regular-20;
+    @include mixins.transition-color;
+    color: var(--color-second-text);
+  }
+}

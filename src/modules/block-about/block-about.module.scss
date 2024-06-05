@@ -7,10 +7,7 @@
   padding: 16px 28px 25px 16px;
   box-sizing: border-box;
 
-  background-color: var(--container-background-color);
-  border-radius: 6px;
-
-  @include mixins.transition-background;
+  @include mixins.background-container;
 
   &__title {
     margin-bottom: 10px;

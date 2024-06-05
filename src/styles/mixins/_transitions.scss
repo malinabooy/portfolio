@@ -7,3 +7,7 @@
 @mixin transition-color {
     transition: vars.$duration color vars.$timing;
 }
+
+@mixin trans-color-back {
+    transition: color vars.$duration  vars.$timing, background-color vars.$duration vars.$timing;
+}

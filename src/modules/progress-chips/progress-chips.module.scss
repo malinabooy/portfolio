@@ -11,12 +11,9 @@
   padding: 20px 71px 20px 30px;
   box-sizing: border-box;
 
-  background-color: var(--container-background-color);
-  border-radius: 6px;
-
   height: 128px;
 
-  @include mixins.transition-background;
+  @include mixins.background-container;
 
   &__type {
     @include mixins.Body-regular-20;

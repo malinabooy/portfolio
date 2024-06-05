@@ -1,3 +1,18 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
 .get-start {
-  // ---
+margin-top: 20px;
+
+  width: 500px;
+  height: 304px;
+
+  padding: 30px 50px 30px 30px;
+
+  @include mixins.background-container;
+  &__content{
+    @include mixins.Body-semi-bold-45;
+    color: var(--color-main-text);
+    @include mixins.transition-color;
+  }
 }

@@ -4,6 +4,8 @@ import { MainInfo } from '../main-info/main-info';
 import { BlockAbout } from '../block-about/block-about';
 import { ProgressChips } from '../progress-chips/progress-chips';
 import { HardSkills } from '../hard-skills/hard-skills';
+import { GetStart } from '../get-start/get-start';
+import { ProjectsPreview } from '../projects-preview/projects-preview';
 
 
 interface props {
@@ -32,9 +34,10 @@ export const BlockPortfolio = (props: props) => {
           </div>
         </div>
       </div>
+      <HardSkills />
       <div class="block-portfolio__bottom-block">
-        <HardSkills />
-        
+        <GetStart/>
+        <ProjectsPreview/>
       </div>
     </div>
   )

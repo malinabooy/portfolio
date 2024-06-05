@@ -11,10 +11,7 @@
   padding: 14px 16px;
   box-sizing: border-box;
 
-  background-color: var(--container-background-color);
-  border-radius: 6px;
-
-  @include mixins.transition-background;
+  @include mixins.background-container;
   &__title {
     @include mixins.Body-regular-20;
     color: var(--color-main-text);

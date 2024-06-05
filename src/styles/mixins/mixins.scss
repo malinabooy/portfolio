@@ -1,4 +1,12 @@
+@use '@/styles/vars/vars';
+
 @forward 'crop';
 @forward 'fluid';
 @forward 'typ';
 @forward 'transitions';
+
+@mixin background-container {
+    background-color: var(--container-background-color);
+    border-radius: 6px;
+    transition: vars.$duration background-color vars.$timing;
+}

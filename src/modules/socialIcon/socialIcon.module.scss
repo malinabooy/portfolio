@@ -1,0 +1,31 @@
+@use '@/styles/vars/vars';
+
+.socialIcon {
+  display: flex;
+  gap: 20px;
+
+  &__link {
+    transition: filter 0.3s;
+  }
+  
+  &:hover .socialIcon__link:not(:hover) {
+    filter: blur(2px);
+  }
+  
+  svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+  color: var(--icon-color);
+    transition-property: transform, color;
+    transition-duration: vars.$duration;
+    transition-timing-function: vars.$timing;
+
+    &:hover {
+      color: var(--icon-hover);
+      transform: scale(1.1);
+    }
+  }
+  
+}

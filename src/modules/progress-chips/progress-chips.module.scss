@@ -1,0 +1,41 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.progress-chips {
+  width: 315px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 71px 20px 30px;
+  box-sizing: border-box;
+
+  background-color: var(--container-background-color);
+  border-radius: 6px;
+
+  height: 128px;
+
+  @include mixins.transition-background;
+
+  &__type {
+    @include mixins.Body-regular-20;
+    color: var(--color-second-text);
+
+    @include mixins.transition-color;
+  }
+
+  &__textOfType {
+    @include mixins.Body-semi-bold-80;
+    color: var(--color-main-text);
+
+    @include mixins.transition-color;
+
+    position: relative;
+
+    span {
+      position: absolute;
+      bottom: 10px;
+    }
+  }
+}

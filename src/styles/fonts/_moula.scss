@@ -1,0 +1,47 @@
+@use '@/styles/vars/_env.scss';
+
+@font-face {
+    font-family: 'Moula';
+    src: url('#{env.$BASE_TEMPLATE_PATCH}/fonts/moula/Moula-Light.woff2') format('woff2'),
+            url('#{env.$BASE_TEMPLATE_PATCH}/fonts/moula/Moula-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Moula';
+    src: url('#{env.$BASE_TEMPLATE_PATCH}/fonts/moula/Moula-Regular.woff2') format('woff2'),
+            url('#{env.$BASE_TEMPLATE_PATCH}/fonts/moula/Moula-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Moula';
+    src: url('#{env.$BASE_TEMPLATE_PATCH}/fonts/moula/Moula-Medium.woff2') format('woff2'),
+        url('#{env.$BASE_TEMPLATE_PATCH}/fonts/moula/Moula-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Moula';
+    src: url('#{env.$BASE_TEMPLATE_PATCH}/fonts/moula/Moula-SemiBold.woff2') format('woff2'),
+        url('#{env.$BASE_TEMPLATE_PATCH}/fonts/moula/Moula-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Moula';
+    src: url('#{env.$BASE_TEMPLATE_PATCH}/fonts/moula/Moula-Bold.woff2') format('woff2'),
+        url('#{env.$BASE_TEMPLATE_PATCH}/fonts/moula/Moula-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

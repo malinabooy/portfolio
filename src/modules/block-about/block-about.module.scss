@@ -1,0 +1,27 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.block-about {
+  margin-block: 20px;
+
+  padding: 16px 28px 25px 16px;
+  box-sizing: border-box;
+
+  background-color: var(--container-background-color);
+  border-radius: 6px;
+
+  @include mixins.transition-background;
+
+  &__title {
+    margin-bottom: 10px;
+    @include mixins.Body-regular-25;
+    color: var(--color-main-text);
+    @include mixins.transition-color;
+  }
+
+  &__text {
+    @include mixins.Body-regular-20;
+    color: var(--color-second-text);
+    @include mixins.transition-color;
+  }
+}

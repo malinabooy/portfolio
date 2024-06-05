@@ -1,0 +1,66 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.header {
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--container-background-color);
+  border-radius: 6px;
+  padding-left: 40px;
+  padding-right: 24px;
+
+  @include mixins.transition-background;
+
+  &__nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+
+    color: var(--color-header-text);
+    @include mixins.Body-regular-20;
+
+    padding: 24px 0;
+
+    @include mixins.transition-color;
+  }
+
+  &__link {
+    position: relative;
+    overflow: hidden;
+
+    cursor: pointer;
+    @include mixins.transition-color;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      display: block;
+      margin-top: 5px;
+      left: 0;
+      background: var(--color-text-hover);
+      transition: vars.$duration width vars.$timing;
+    }
+
+
+    &:hover {
+      color: var(--color-text-hover);
+    }
+
+    &:hover::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  li {
+    list-style-type: none;
+  }
+}

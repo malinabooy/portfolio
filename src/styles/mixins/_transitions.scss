@@ -1,0 +1,9 @@
+@use '@/styles/vars/vars';
+
+@mixin transition-background {
+    transition: vars.$duration background-color vars.$timing;
+}
+
+@mixin transition-color {
+    transition: vars.$duration color vars.$timing;
+}

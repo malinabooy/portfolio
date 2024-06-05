@@ -1,0 +1,61 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.switch-themes {
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    .switch-themes__toggle-label{
+      background-color: var(--switcher-hover);
+    }
+    .switch-themes__toggle:checked+.switch-themes__toggle-label {
+      background-color: var(--switcher-hover);
+    }
+  }
+  &__toggle {
+    display: none;
+  }
+  
+  &__toggle-label {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 30px;
+    background-color: var(--color-header-text);
+    border-radius: 30px;
+    cursor: pointer;
+
+    @include mixins.transition-background;
+
+  }
+  
+  &__toggle-label:before {
+    content: '☀️';
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 50%;
+    transition: transform 0.5s, content 0.5s;
+  }
+  
+  &__toggle:checked+&__toggle-label {
+    background-color: var(--color-header-text);
+
+    @include mixins.transition-background;
+  }
+  
+  &__toggle:checked+&__toggle-label::before {
+    content: '🌙';
+    transform: translate(30px, -50%);
+  }
+}

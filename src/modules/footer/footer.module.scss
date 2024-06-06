@@ -1,0 +1,15 @@
+@use '@/styles/mixins/mixins';
+@use '@/styles/vars/vars';
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  &__copyright {
+    @include mixins.Body-light-16;
+    color: var(--color-main-text);
+    @include mixins.transition-color;
+  }
+}

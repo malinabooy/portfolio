@@ -15,15 +15,38 @@
     justify-content: space-between;
     margin-bottom: 20px;
   }
+
   &__title {
     @include mixins.Body-regular-20;
     @include mixins.transition-color;
     color: var(--color-main-text);
   }
-  &__see-all{
+
+  &__see-all {
     cursor: pointer;
     @include mixins.Body-regular-20;
     @include mixins.transition-color;
     color: var(--color-second-text);
+  }
+
+  &__swiper {
+    position: relative;
+    overflow: hidden;
+
+    &-wrapper {
+      display: flex;
+      gap: 10px;
+    }
+
+    &-slide {
+      width: 260px;
+      height: 212px;
+      flex-shrink: 0;
+
+      img {
+        object-fit: cover;
+        border-radius: 8px;
+      }
+    }
   }
 }

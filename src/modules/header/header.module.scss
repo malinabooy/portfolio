@@ -2,7 +2,7 @@
 @use '@/styles/vars/vars';
 
 .header {
-  margin-top: 30px;
+  margin-block: 30px 20px;
 
   display: flex;
   justify-content: space-between;
@@ -53,6 +53,14 @@
     }
 
     &:hover::after {
+      width: 100%;
+      left: 0;
+    }
+    &:active {
+      color: var(--color-text-hover);
+    }
+
+    &:active::after {
       width: 100%;
       left: 0;
     }

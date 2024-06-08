@@ -2,7 +2,6 @@
 @use '@/styles/vars/vars';
 
 .projects-preview {
-  margin-top: 20px;
   @include mixins.background-container;
 
   width: 840px;
@@ -27,9 +26,18 @@
     @include mixins.Body-regular-20;
     @include mixins.transition-color;
     color: var(--color-second-text);
+
+    &:hover {
+      color: var(--color-text-hover);
+    }
+
+    &:active {
+      color: var(--color-text-hover);
+    }
   }
 
   &__swiper {
+    border-radius: 8px;
     position: relative;
     overflow: hidden;
 
@@ -39,13 +47,23 @@
     }
 
     &-slide {
+      cursor: pointer;
       width: 260px;
       height: 212px;
+      border-radius: 8px;
       flex-shrink: 0;
+      overflow: hidden;
 
+      &:hover img {
+        transform: scale(1.1);
+      }
+      &:active img {
+        transform: scale(1.1);
+      }
       img {
         object-fit: cover;
         border-radius: 8px;
+        transition: transform vars.$duration  vars.$timing;
       }
     }
   }

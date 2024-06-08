@@ -9,15 +9,21 @@ interface props {
 export const Header = (props: props) => {
   const { className } = props
 
+  const navigationLinks = [
+    { placeholder: 'Обо мне', path: '/about' },
+    { placeholder: 'Проекты', path: '/projects' },
+    { placeholder: 'Резюме', path: '/resume' },
+    { placeholder: 'Мини-игра', path: '/game' },
+  ]
   return (
     <header class={cn('header', className)}>
         <Logo className='header__logo' />
         <nav class='header__nav'>
-          {['Обо мне', 'Проекты', 'Резюме', 'Контакты', 'Мини-игра'].map(
-            (li) => (
+          {navigationLinks.map(
+            (link) => (
               <li>
-                <a href='javascript:void(0)' class='header__link'>
-                  {li}
+                <a href={link.path} class='header__link'>
+                  {link.placeholder}
                 </a>
               </li>
             )

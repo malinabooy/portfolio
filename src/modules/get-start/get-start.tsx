@@ -10,7 +10,7 @@ export const GetStart = (props: props) => {
   return (
     <div class={cn('get-start', className)}>
       <p class="get-start__content">
-        Let's grab a coffee and jump on conversation chat with me.
+        Давай выпьем по чашечке кофе и продолжим беседу
       </p>
       <BtnStart />
     </div>

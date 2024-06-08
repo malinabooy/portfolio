@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-block: 20px;
 
   &__copyright {
     @include mixins.Body-light-16;

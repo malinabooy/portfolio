@@ -14,7 +14,7 @@
   @include mixins.background-container;
 
   &__type {
-    @include mixins.Body-regular-16;
+    @include mixins.Body-regular-18;
     color: var(--color-second-text);
 
     @include mixins.transition-color;

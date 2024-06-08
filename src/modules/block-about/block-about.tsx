@@ -8,7 +8,7 @@ export const BlockAbout = (props: props) => {
 
   return (
     <div class={cn('block-about', className)}>
-      <h2 class='block-about__title'>About</h2>
+      <h2 class='block-about__title'>Обо мне</h2>
       <p class='block-about__text'>Привет! Я *Давлиев Ильмир*, преданный своему делу и инновационный **фронтенд-разработчик** с
         глубокой страстью к творчеству.
         привлекательный пользовательский опыт. Имея более чем десятилетний

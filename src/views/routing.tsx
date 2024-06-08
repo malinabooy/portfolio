@@ -1,6 +1,9 @@
 import { routing } from '@/views/utils/routing'
 import { ListMenu } from '@/views/pages'
-import { Main } from '@/views/pages/main'
+import { ProjectsPage } from '@/views/pages/projects-page'
+import { ResumePage } from '@/views/pages/resume-page'
+import { GamePage } from '@/views/pages/game-page'
+import { AboutPage } from '@/views/pages/about-page'
 
 export const associatedUrl = [
   {
@@ -9,9 +12,24 @@ export const associatedUrl = [
     component: <ListMenu />
   },
   {
-    placeholder: 'Пример страницы',
-    path: 'main',
-    component: <Main />
+    placeholder: 'Обо мне',
+    path: 'about',
+    component: <AboutPage />
+  },
+  {
+    placeholder: 'Проекты',
+    path: 'projects',
+    component: <ProjectsPage />
+  },
+  {
+    placeholder: 'Резюме',
+    path: 'resume',
+    component: <ResumePage />
+  },
+  {
+    placeholder: 'Мини-игра',
+    path: 'game',
+    component: <GamePage />
   },
 ]
 

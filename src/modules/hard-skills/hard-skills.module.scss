@@ -2,7 +2,7 @@
 @use '@/styles/vars/vars';
 
 .hard-skills {
-  margin-top: 20px;
+  margin-block: 20px;
   
   display: flex;
   align-items: center;
@@ -16,6 +16,8 @@
     @include mixins.Body-regular-20;
     color: var(--color-main-text);
     @include mixins.transition-color;
+
+    text-wrap: nowrap;
   }
   &__skills {
     display: flex;

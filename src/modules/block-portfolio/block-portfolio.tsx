@@ -22,15 +22,15 @@ export const BlockPortfolio = (props: props) => {
         </div>
         <div class="block-portfolio__main-cards">
           <div class="block-portfolio__title-chips">
-            <MainInfo type='Name' textOfType='Давлиев Ильмир' />
-            <MainInfo type='Profession' textOfType='Frontend-программист' />
-            <MainInfo type='Location' textOfType='г. Казань' />
+            <MainInfo type='ФИО' textOfType='Давлиев Ильмир' />
+            <MainInfo type='Специализация' textOfType='Frontend-программист' />
+            <MainInfo type='Город' textOfType='г. Казань' />
           </div>
           <BlockAbout />
           <div class="block-portfolio__bottom-chips">
-            <ProgressChips type='Years of <br>Experience' textOfType='3<span>+</span>' />
-            <ProgressChips type='Successful <br>Projects' textOfType='20<span>+</span>' />
-            <ProgressChips type='My happy <br>Client' textOfType='15<span>+</span>' />
+            <ProgressChips type='Многолетний <br>опыт работы' textOfType='3<span>+</span>' />
+            <ProgressChips type='Успешных <br>проектов' textOfType='20<span>+</span>' />
+            <ProgressChips type='Счастливых клиентов' textOfType='15<span>+</span>' />
           </div>
         </div>
       </div>

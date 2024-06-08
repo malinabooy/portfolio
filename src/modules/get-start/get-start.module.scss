@@ -2,17 +2,20 @@
 @use '@/styles/vars/vars';
 
 .get-start {
-margin-top: 20px;
-
-  width: 500px;
+  display: flex;
+  flex-direction: column;
+justify-content: space-between;
   height: 304px;
 
   padding: 30px 50px 30px 30px;
+  box-sizing: border-box;
 
   @include mixins.background-container;
-  &__content{
+
+  &__content {
     @include mixins.Body-semi-bold-45;
     color: var(--color-main-text);
     @include mixins.transition-color;
+
   }
 }

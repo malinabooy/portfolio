@@ -2,6 +2,7 @@ import { BlockPortfolio } from '@/modules/block-portfolio/block-portfolio'
 import { Container } from '@/modules/container/container'
 import { Footer } from '@/modules/footer/footer'
 import { Header } from '@/modules/header/header'
+import { ModalForm } from '@/modules/modal-form/modal-form'
 import { Layout } from '@/views/_/layout'
 
 export const AboutPage = () => {
@@ -10,8 +11,9 @@ export const AboutPage = () => {
       <Container>
         <Header />
         <BlockPortfolio />
-        <Footer/>
+        <Footer />
       </Container>
+      <ModalForm />
     </Layout>
   )
 }

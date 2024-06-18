@@ -18,8 +18,11 @@
     height: 40px;
     transition: transform vars.$duration vars.$timing, color vars.$duration vars.$timing;
 
-    @media (width < vars.$media-768) {
-
+    @media (width < vars.$media-1280) {
+      width: 90px;
+      height: 30px;
     }
+
+    @media (width < vars.$media-768) {}
   }
 }

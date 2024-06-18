@@ -2,23 +2,47 @@
 @use '@/styles/vars/vars';
 
 .block-about {
-  margin-block: 20px;
-
   padding: 16px 28px 25px 16px;
   box-sizing: border-box;
+  height: 100%;
 
   @include mixins.background-container;
+
+  @media (width < vars.$media-1280) {
+    padding: 10px 20px 20px 10px;
+
+  }
+
+  @media (width < vars.$media-768) {}
 
   &__title {
     margin-bottom: 10px;
     @include mixins.Body-regular-25;
     color: var(--color-main-text);
     @include mixins.transition-color;
+
+    @media (width < vars.$media-1280) {
+      @include mixins.Body-regular-20;
+      margin-bottom: 7px;
+    }
+
+    @media (width < vars.$media-768) {}
   }
 
   &__text {
     @include mixins.Body-regular-20;
     color: var(--color-second-text);
     @include mixins.transition-color;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (width < vars.$media-1280) {
+      @include mixins.Body-regular-18;
+      br {
+        display: none;
+      }
+    }
+
+    @media (width < vars.$media-768) {}
   }
 }

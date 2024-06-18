@@ -3,30 +3,65 @@
 
 .hard-skills {
   margin-block: 20px;
-  
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 20px;
 
   padding: 14px 16px;
   box-sizing: border-box;
 
+  text-overflow: ellipsis;
+  overflow: hidden;
+
   @include mixins.background-container;
+
+  @media (width < vars.$media-1280) {
+    margin-block: 10px;
+    padding: 10px 12px;
+
+  }
+
+  @media (width < vars.$media-768) {}
+
   &__title {
     @include mixins.Body-regular-20;
     color: var(--color-main-text);
     @include mixins.transition-color;
 
     text-wrap: nowrap;
+
+    @media (width < vars.$media-1280) {
+      @include mixins.Body-regular-18;
+    }
+
+    @media (width < vars.$media-768) {}
   }
+
   &__skills {
     display: flex;
     gap: 15px;
+
+    @media (width < vars.$media-1280) {
+      gap: 8px;
+    }
+
+    @media (width < vars.$media-768) {}
   }
+
   &__skill {
     list-style-type: none;
-    @include mixins.Body-regular-16;
+    @include mixins.Body-regular-18;
     color: var(--color-second-text);
     @include mixins.transition-color;
+
+    text-wrap: nowrap;
+
+    @media (width < vars.$media-1280) {
+      @include mixins.Body-regular-16;
+    }
+
+    @media (width < vars.$media-768) {}
   }
 }

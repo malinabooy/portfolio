@@ -8,7 +8,14 @@
     --container-gap: 15px;
     --container-width: 1330px;
   }
+  @media (width < media.$media-1280) {
+    --container-gap: 8px;
+    --container-width: 980px;
+  }
 
+  @media (width < media.$media-768) {
+    --container-width: 740px;
+  }
 }
 
 .container {

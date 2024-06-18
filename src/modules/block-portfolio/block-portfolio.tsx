@@ -6,6 +6,7 @@ import { ProgressChips } from '../progress-chips/progress-chips';
 import { HardSkills } from '../hard-skills/hard-skills';
 import { GetStart } from '../get-start/get-start';
 import { ProjectsPreview } from '../projects-preview/projects-preview';
+import { FormContacts } from '../form-contacts/form-contacts';
 
 
 interface props {
@@ -28,9 +29,9 @@ export const BlockPortfolio = (props: props) => {
           </div>
           <BlockAbout />
           <div class="block-portfolio__bottom-chips">
-            <ProgressChips type='Многолетний <br>опыт работы' textOfType='3<span>+</span>' />
+            <ProgressChips type='Опыт работы<br>(лет)' textOfType='3<span>+</span>' />
             <ProgressChips type='Успешных <br>проектов' textOfType='20<span>+</span>' />
-            <ProgressChips type='Счастливых клиентов' textOfType='15<span>+</span>' />
+            <ProgressChips type='Счастливых <br>клиентов' textOfType='15<span>+</span>' />
           </div>
         </div>
       </div>

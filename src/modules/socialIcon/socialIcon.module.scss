@@ -4,28 +4,39 @@
   display: flex;
   gap: 20px;
 
+  @media (width < vars.$media-1280) {
+    gap: 10px;
+  }
+
+  @media (width < vars.$media-768) {}
+
   &__link {
     transition: filter 0.3s;
   }
-  
+
   &:hover .socialIcon__link:not(:hover) {
     filter: blur(2px);
   }
-  
+
   svg {
     width: 30px;
     height: 30px;
     cursor: pointer;
 
-  color: var(--icon-color);
+    color: var(--icon-color);
     transition-property: transform, color;
     transition-duration: vars.$duration;
     transition-timing-function: vars.$timing;
-
+    @media (width < vars.$media-1280) {
+      width: 20px;
+      height: 20px;
+    }
+  
+    @media (width < vars.$media-768) {}
     &:hover {
       color: var(--icon-hover);
       transform: scale(1.1);
     }
   }
-  
+
 }

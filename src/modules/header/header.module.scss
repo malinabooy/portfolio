@@ -12,6 +12,11 @@
   padding-right: 24px;
 
   @include mixins.background-container;
+  @media (width < vars.$media-1280) {
+margin-block: 20px 10px;
+  }
+
+  @media (width < vars.$media-768) {}
 
   &__nav {
     display: flex;
@@ -26,6 +31,14 @@
     padding: 24px 0;
 
     @include mixins.transition-color;
+
+    @media (width < vars.$media-1280) {
+      @include mixins.Body-regular-16;
+      gap: 15px;
+      padding: 16px 0;
+    }
+
+    @media (width < vars.$media-768) {}
   }
 
   &__link {

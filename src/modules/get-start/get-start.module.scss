@@ -4,18 +4,30 @@
 .get-start {
   display: flex;
   flex-direction: column;
-justify-content: space-between;
-  height: 304px;
+  justify-content: space-between;
+  max-height: 304px;
 
   padding: 30px 50px 30px 30px;
   box-sizing: border-box;
 
   @include mixins.background-container;
 
+  @media (width < vars.$media-1280) {
+
+  }
+
+  @media (width < vars.$media-768) {}
+
   &__content {
     @include mixins.Body-semi-bold-45;
     color: var(--color-main-text);
     @include mixins.transition-color;
+
+    @media (width < vars.$media-1280) {
+      @include mixins.Body-semi-bold-30;
+    }
+  
+    @media (width < vars.$media-768) {}
 
   }
 }

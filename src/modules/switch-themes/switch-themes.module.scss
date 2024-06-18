@@ -8,17 +8,19 @@
   align-items: center;
 
   &:hover {
-    .switch-themes__toggle-label{
+    .switch-themes__toggle-label {
       background-color: var(--switcher-hover);
     }
+
     .switch-themes__toggle:checked+.switch-themes__toggle-label {
       background-color: var(--switcher-hover);
     }
   }
+
   &__toggle {
     display: none;
   }
-  
+
   &__toggle-label {
     position: relative;
     display: block;
@@ -30,8 +32,14 @@
 
     @include mixins.transition-background;
 
+    @media (width < vars.$media-1280) {
+      width: 40px;
+      height: 20px;
+    }
+
+    @media (width < vars.$media-768) {}
   }
-  
+
   &__toggle-label:before {
     content: '☀️';
     position: absolute;
@@ -46,16 +54,30 @@
     font-size: 14px;
     border-radius: 50%;
     transition: transform 0.5s, content 0.5s;
+
+    @media (width < vars.$media-1280) {
+      width: 18px;
+      height: 18px;
+      font-size: 12px;
+    }
+
+    @media (width < vars.$media-768) {}
   }
-  
+
   &__toggle:checked+&__toggle-label {
     background-color: var(--color-header-text);
 
     @include mixins.transition-background;
   }
-  
+
   &__toggle:checked+&__toggle-label::before {
     content: '🌙';
     transform: translate(30px, -50%);
+
+    @media (width < vars.$media-1280) {
+      transform: translate(17px, -50%);
+    }
+
+    @media (width < vars.$media-768) {}
   }
 }

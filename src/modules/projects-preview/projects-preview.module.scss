@@ -5,27 +5,53 @@
   @include mixins.background-container;
 
   width: 840px;
-  height: 304px;
+
 
   padding: 20px 20px 30px 20px;
+  box-sizing: border-box;
+
+  @media (width < vars.$media-1280) {
+    width: 640px;
+    padding: 15px 15px 22px 15px;
+  }
+
+  @media (width < vars.$media-768) {}
 
   &__top-block {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+
+    @media (width < vars.$media-1280) {
+      margin-bottom: 12px;
+    }
+
+    @media (width < vars.$media-768) {}
   }
 
   &__title {
     @include mixins.Body-regular-20;
     @include mixins.transition-color;
     color: var(--color-main-text);
+
+    @media (width < vars.$media-1280) {
+      @include mixins.Body-regular-18;
+    }
+
+    @media (width < vars.$media-768) {}
   }
 
   &__see-all {
     cursor: pointer;
-    @include mixins.Body-regular-20;
+    @include mixins.Body-regular-18;
     @include mixins.transition-color;
     color: var(--color-second-text);
+
+    @media (width < vars.$media-1280) {
+      gap: 10px;
+    }
+
+    @media (width < vars.$media-768) {}
 
     &:hover {
       color: var(--color-text-hover);
@@ -54,16 +80,25 @@
       flex-shrink: 0;
       overflow: hidden;
 
+      @media (width < vars.$media-1280) {
+        width: 200px;
+        height: 164px;
+      }
+    
+      @media (width < vars.$media-768) {}
+
       &:hover img {
         transform: scale(1.1);
       }
+
       &:active img {
         transform: scale(1.1);
       }
+
       img {
         object-fit: cover;
         border-radius: 8px;
-        transition: transform vars.$duration  vars.$timing;
+        transition: transform vars.$duration vars.$timing;
       }
     }
   }

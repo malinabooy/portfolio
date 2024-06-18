@@ -2,24 +2,34 @@
 @use '@/styles/vars/vars';
 
 .progress-chips {
-  width: 315px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 20px 71px 20px 30px;
+  padding: 20px 70px 20px 30px;
   box-sizing: border-box;
 
-  height: 128px;
+  height: 100%;
 
   @include mixins.background-container;
+
+  @media (width < vars.$media-1280) {
+    padding: 15px 45px 15px 15px;
+  }
+
+  @media (width < vars.$media-768) {}
 
   &__type {
     @include mixins.Body-regular-20;
     color: var(--color-second-text);
 
     @include mixins.transition-color;
+
+    @media (width < vars.$media-1280) {
+      @include mixins.Body-regular-16;
+    }
+
+    @media (width < vars.$media-768) {}
   }
 
   &__textOfType {
@@ -30,9 +40,20 @@
 
     position: relative;
 
+    @media (width < vars.$media-1280) {
+      @include mixins.Body-semi-bold-45;
+    }
+
+    @media (width < vars.$media-768) {}
+
     span {
       position: absolute;
       bottom: 10px;
+      @media (width < vars.$media-1280) {
+        bottom: 5px;
+      }
+    
+      @media (width < vars.$media-768) {}
     }
   }
 }

@@ -37,6 +37,10 @@ body {
   background-color: var(--color-body);
   transition: vars.$duration background-color vars.$timing;
 }
+
+.modal-open {
+  overflow-y: hidden;
+}
 .light-theme {
   --color-body: #FFF;
 

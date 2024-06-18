@@ -1,14 +1,30 @@
+@use '@/styles/mixins/mixins.scss';
+@use '@/styles/vars/vars.scss';
+
 .block-portfolio {
   &__top-block {
     display: flex;
     gap: 20px;
+    max-height: 450px;
+
+    @media (width < vars.$media-1280) {
+      max-height: 350px;
+      gap: 10px;
+    }
+
+    @media (width < vars.$media-768) {}
   }
 
   &__image-container {
-    width: 350px;
-    height: 450px;
+    max-width: 350px;
     flex-shrink: 0;
 
+    @media (width < vars.$media-1280) {
+      max-width: 250px;
+
+    }
+
+    @media (width < vars.$media-768) {}
 
     img {
       width: 100%;
@@ -19,21 +35,54 @@
     }
   }
 
+  &__main-cards {
+    display: grid;
+    grid-template-rows: 60px 1fr 1fr;
+    gap: 20px;
+
+    @media (width < vars.$media-1280) {
+      gap: 10px;
+    }
+
+    @media (width < vars.$media-768) {}
+  }
+
   &__title-chips {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    text-wrap: nowrap;
-  }
 
+    @media (width < vars.$media-1280) {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+
+      &>*:nth-child(3) {
+        display: none;
+      }
+    }
+
+    @media (width < vars.$media-768) {}
+  }
   &__bottom-chips {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+  
+    @media (width < vars.$media-1280) {
+      gap: 10px;
+    }
+  
+    @media (width < vars.$media-768) {}
   }
-
+  
   &__bottom-block {
     display: flex;
     gap: 20px;
+    
+    @media (width < vars.$media-1280) {
+      gap: 10px;
+    }
+  
+    @media (width < vars.$media-768) {}
   }
 }
